@@ -908,7 +908,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHS-QY-SOd">
-                                                <rect key="frame" x="10" y="425" width="300" height="24"/>
+                                                <rect key="frame" x="0.0" y="425" width="320" height="24"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
                                                 <state key="normal" image="imgDeleteRenewal.png">
@@ -1108,13 +1108,37 @@
                                     <outlet property="delegate" destination="D3u-pq-Bl9" id="Gyp-qb-8qX"/>
                                 </connections>
                             </tableView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="imgNoRecord.png" translatesAutoresizingMaskIntoConstraints="NO" id="a30-pH-5v1">
+                                <rect key="frame" x="0.0" y="70" width="320" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Rb7-ch-4sz"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJE-1L-Ply">
+                                <rect key="frame" x="0.0" y="70" width="320" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CjO-c0-7bG"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedNoRecord:" destination="D3u-pq-Bl9" eventType="touchUpInside" id="p0C-Th-nam"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.86666666670000003" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="nJE-1L-Ply" firstAttribute="top" secondItem="WUR-bh-Xkq" secondAttribute="bottom" constant="2" id="14D-n9-v1w"/>
+                            <constraint firstAttribute="trailing" secondItem="a30-pH-5v1" secondAttribute="trailing" id="2gd-01-DCB"/>
                             <constraint firstItem="VPS-qp-ZwV" firstAttribute="leading" secondItem="3dZ-NU-wdJ" secondAttribute="trailing" constant="41" id="91P-lX-Mo2"/>
+                            <constraint firstItem="nJE-1L-Ply" firstAttribute="leading" secondItem="CVg-n8-JVI" secondAttribute="leading" id="Apz-GM-zNi"/>
                             <constraint firstItem="WUR-bh-Xkq" firstAttribute="leading" secondItem="CVg-n8-JVI" secondAttribute="leading" constant="8" id="DKb-Zz-SMl"/>
                             <constraint firstItem="BYz-Qb-4bs" firstAttribute="top" secondItem="FlC-pp-5AK" secondAttribute="bottom" id="HbW-Q3-qtU"/>
                             <constraint firstItem="Eig-PE-laN" firstAttribute="leading" secondItem="CVg-n8-JVI" secondAttribute="leading" id="I5I-er-ZPY"/>
+                            <constraint firstAttribute="trailing" secondItem="nJE-1L-Ply" secondAttribute="trailing" id="JqN-o6-oqz"/>
+                            <constraint firstItem="a30-pH-5v1" firstAttribute="top" secondItem="WUR-bh-Xkq" secondAttribute="bottom" constant="2" id="KWg-sV-sdZ"/>
+                            <constraint firstItem="a30-pH-5v1" firstAttribute="leading" secondItem="CVg-n8-JVI" secondAttribute="leading" id="Qqm-bn-afv"/>
                             <constraint firstAttribute="trailing" secondItem="FlC-pp-5AK" secondAttribute="trailing" id="Ssz-g2-yx2"/>
                             <constraint firstItem="3dZ-NU-wdJ" firstAttribute="top" secondItem="It1-Ri-zhe" secondAttribute="bottom" constant="15" id="Tbw-QC-nQj"/>
                             <constraint firstItem="3dZ-NU-wdJ" firstAttribute="leading" secondItem="WUR-bh-Xkq" secondAttribute="trailing" constant="64" id="Vl0-ki-kMt"/>
@@ -1130,6 +1154,8 @@
                     <navigationItem key="navigationItem" id="fp1-rL-hYN"/>
                     <connections>
                         <outlet property="btnMenu" destination="WUR-bh-Xkq" id="fpG-EP-aZu"/>
+                        <outlet property="btnNorecordFound" destination="nJE-1L-Ply" id="YwH-8L-bIl"/>
+                        <outlet property="imgNoRecordFound" destination="a30-pH-5v1" id="Jdo-xz-fSo"/>
                         <outlet property="tblRenewal30" destination="FlC-pp-5AK" id="kpl-1J-AsZ"/>
                         <segue destination="YZ1-Dc-O8s" kind="push" identifier="viewRenewal" id="Mbd-ve-rdj"/>
                     </connections>
@@ -2379,10 +2405,11 @@
         <image name="WhiteTab.png" width="236" height="169"/>
         <image name="imgButtonChPass.png" width="393" height="30"/>
         <image name="imgChangePassLabel.png" width="540" height="62"/>
-        <image name="imgDeleteRenewal.png" width="393" height="30"/>
+        <image name="imgDeleteRenewal.png" width="381" height="30"/>
         <image name="imgHomeIcon.png" width="26" height="25"/>
         <image name="imgLoginField.png" width="250" height="98"/>
         <image name="imgLogout.png" width="25" height="19"/>
+        <image name="imgNoRecord.png" width="1079" height="126"/>
         <image name="imgProfile.png" width="25" height="25"/>
         <image name="imgSettingIcon.png" width="25" height="25"/>
         <image name="imgTop.png" width="540" height="112"/>
@@ -2400,8 +2427,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="MdD-pw-acI"/>
-        <segue reference="BMg-ef-RxW"/>
         <segue reference="PpA-Ve-u3v"/>
+        <segue reference="BMg-ef-RxW"/>
+        <segue reference="MdD-pw-acI"/>
     </inferredMetricsTieBreakers>
 </document>

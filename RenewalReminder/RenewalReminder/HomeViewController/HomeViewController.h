@@ -14,5 +14,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tblMenu;
 - (IBAction)clickedMenu:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *btnMenu;
+@property (weak, nonatomic) IBOutlet UIImageView *imgNoRecordFound;
+@property (weak, nonatomic) IBOutlet UIButton *btnNorecordFound;
 
+- (IBAction)clickedNoRecord:(id)sender;
 @end

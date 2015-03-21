@@ -37,6 +37,9 @@
 {
     [super viewDidLoad];
     
+    self.btnNorecordFound.hidden = YES;
+    self.imgNoRecordFound.hidden = YES;
+    
     self.localNotification = [[Notification alloc] init];
     
     [self.btnMenu addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
@@ -87,7 +90,13 @@
 //}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    if ([AppDelegate sharedAppDelegate].renewalsList30Days.count>0 || [AppDelegate sharedAppDelegate].renewalsListOther.count>0) {
+        return 2;
+    }
+    else{
+        return 0;
+    }
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -226,6 +235,15 @@
             }
         }
         
+        if ([AppDelegate sharedAppDelegate].renewalsList30Days.count>0 || [AppDelegate sharedAppDelegate].renewalsListOther.count>0) {
+            self.btnNorecordFound.hidden = YES;
+            self.imgNoRecordFound.hidden = YES;
+        }
+        else{
+            self.btnNorecordFound.hidden = NO;
+            self.imgNoRecordFound.hidden = NO;
+        }
+        
     }
     else{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -249,5 +267,8 @@
     else{
         self.tblMenu.hidden = YES;
     }
+}
+- (IBAction)clickedNoRecord:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.comparewithus.com/apptour/"]];
 }
 @end
