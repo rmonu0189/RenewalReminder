@@ -46,6 +46,7 @@
     [param setValue:mobile forKeyPath:@"contact"];
     [param setValue:loginID forKeyPath:@"loginID"];
     [param setValue:loginType forKeyPath:@"login_type"];
+    [param setValue:@"1" forKeyPath:@"app_type"];
     [self makePostRequestWithParam:param];
     
 }
@@ -62,6 +63,7 @@
     [param setValue:password forKeyPath:@"password"];
     [param setValue:loginID forKeyPath:@"loginID"];
     [param setValue:loginType forKeyPath:@"login_type"];
+    [param setValue:@"1" forKeyPath:@"app_type"];
     [self makePostRequestWithParam:param];
     
 }
@@ -73,6 +75,7 @@
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     [param setValue:@"FORGOT_PASSWORD" forKeyPath:@"action"];
     [param setValue:email forKeyPath:@"email"];
+    [param setValue:@"1" forKeyPath:@"app_type"];
     [self makePostRequestWithParam:param];
 }
 
@@ -96,6 +99,7 @@
     [param setValue:provider forKeyPath:@"provider"];
     [param setValue:price forKeyPath:@"price"];
     [param setValue:notes forKeyPath:@"notes"];
+    [param setValue:@"1" forKeyPath:@"app_type"];
     [self makePostRequestWithParam:param];
 }
 
@@ -121,6 +125,7 @@
     [param setValue:price forKeyPath:@"price"];
     [param setValue:notes forKeyPath:@"notes"];
     [param setValue:category forKeyPath:@"category"];
+    [param setValue:@"1" forKeyPath:@"app_type"];
     [self makePostRequestWithParam:param];
 }
 
@@ -131,6 +136,7 @@
     [param setValue:@"DELETE_RENEWAL" forKeyPath:@"action"];
     [param setValue:rid forKeyPath:@"rid"];
     [param setValue:[AppDelegate sharedAppDelegate].me.userID forKeyPath:@"uid"];
+    [param setValue:@"1" forKeyPath:@"app_type"];
     [self makePostRequestWithParam:param];
 }
 
@@ -139,6 +145,7 @@
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     [param setValue:@"GET_RENEWAL_LIST" forKeyPath:@"action"];
     [param setValue:[AppDelegate sharedAppDelegate].me.userID forKeyPath:@"uid"];
+    [param setValue:@"1" forKeyPath:@"app_type"];
     [self makePostRequestWithParam:param];
 }
 
@@ -154,6 +161,7 @@
     [param setValue:fName forKeyPath:@"first_name"];
     [param setValue:surname forKeyPath:@"surname"];
     [param setValue:mobile forKeyPath:@"contact"];
+    [param setValue:@"1" forKeyPath:@"app_type"];
     [self makePostRequestWithParam:param];
 }
 
@@ -163,6 +171,7 @@
     [param setValue:[AppDelegate sharedAppDelegate].me.userID forKeyPath:@"uid"];
     [param setValue:oldPass forKeyPath:@"old_password"];
     [param setValue:newPas forKeyPath:@"new_password"];
+    [param setValue:@"1" forKeyPath:@"app_type"];
     [self makePostRequestWithParam:param];
 }
 
