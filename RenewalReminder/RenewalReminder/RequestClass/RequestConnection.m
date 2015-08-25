@@ -12,7 +12,7 @@
 //#define SERVER @"http://localhost:8888/renewal/mobile.php"
 
 //-- Live server
-#define SERVER @"http://reminder.premiumsaver.co.uk/mobileuser/mobile.php"
+#define SERVER @"http://reminder.premiumsaver.co.uk/mobileuser/CompareWithUs/mobile.php"
 
 @interface RequestConnection ()
 {

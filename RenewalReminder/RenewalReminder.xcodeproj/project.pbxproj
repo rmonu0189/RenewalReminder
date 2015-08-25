@@ -1678,7 +1678,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "db6dc010-4925-482a-afbf-dbeac0dfb341";
+				PROVISIONING_PROFILE = "fb6ccf41-0914-497c-898b-4a341f754c7d";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1711,7 +1711,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "db6dc010-4925-482a-afbf-dbeac0dfb341";
+				PROVISIONING_PROFILE = "fb6ccf41-0914-497c-898b-4a341f754c7d";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1732,7 +1732,7 @@
 				INFOPLIST_FILE = "RenewalReminder/RenewalReminder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "db6dc010-4925-482a-afbf-dbeac0dfb341";
+				PROVISIONING_PROFILE = "fb6ccf41-0914-497c-898b-4a341f754c7d";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1754,7 +1754,7 @@
 				INFOPLIST_FILE = "RenewalReminder/RenewalReminder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "db6dc010-4925-482a-afbf-dbeac0dfb341";
+				PROVISIONING_PROFILE = "fb6ccf41-0914-497c-898b-4a341f754c7d";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1780,7 +1780,7 @@
 				);
 				INFOPLIST_FILE = "RenewalReminderTests/RenewalReminderTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "db6dc010-4925-482a-afbf-dbeac0dfb341";
+				PROVISIONING_PROFILE = "fb6ccf41-0914-497c-898b-4a341f754c7d";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1802,7 +1802,7 @@
 				GCC_PREFIX_HEADER = "RenewalReminder/RenewalReminder-Prefix.pch";
 				INFOPLIST_FILE = "RenewalReminderTests/RenewalReminderTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "db6dc010-4925-482a-afbf-dbeac0dfb341";
+				PROVISIONING_PROFILE = "fb6ccf41-0914-497c-898b-4a341f754c7d";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
