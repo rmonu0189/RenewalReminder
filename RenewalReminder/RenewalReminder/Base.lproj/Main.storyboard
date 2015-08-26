@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ePN-mV-8Xn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ePN-mV-8Xn">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -907,18 +907,6 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHS-QY-SOd">
-                                                <rect key="frame" x="0.0" y="425" width="320" height="24"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
-                                                <state key="normal" image="imgDeleteRenewal.png">
-                                                    <color key="titleColor" red="0.93333333330000001" green="0.44705882349999998" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="clickedDeleteRenewal:" destination="YZ1-Dc-O8s" eventType="touchUpInside" id="GTu-1r-bz9"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKo-3u-1RJ">
                                                 <rect key="frame" x="-1" y="84" width="295" height="16"/>
                                                 <state key="normal">
@@ -969,10 +957,28 @@
                                     <constraint firstItem="fqQ-fL-qSP" firstAttribute="leading" secondItem="kn9-Wv-qqc" secondAttribute="leading" id="s6L-wP-cj5"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHS-QY-SOd">
+                                <rect key="frame" x="0.0" y="533" width="320" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.3106800843940396" blue="0.34890660630749604" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="xfJ-bm-v6f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <state key="normal" title="DELETE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickedDeleteRenewal:" destination="YZ1-Dc-O8s" eventType="touchUpInside" id="GTu-1r-bz9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.86666666670000003" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0cA-bL-jJe" firstAttribute="top" secondItem="kn9-Wv-qqc" secondAttribute="bottom" id="CGd-qd-igx"/>
+                            <constraint firstItem="pHS-QY-SOd" firstAttribute="leading" secondItem="emx-MJ-5P5" secondAttribute="leading" id="GeW-lz-bHE"/>
+                            <constraint firstItem="0cA-bL-jJe" firstAttribute="top" secondItem="pHS-QY-SOd" secondAttribute="bottom" id="JbT-aJ-F6e"/>
+                            <constraint firstAttribute="trailing" secondItem="pHS-QY-SOd" secondAttribute="trailing" id="TFR-5u-YgK"/>
                             <constraint firstItem="kn9-Wv-qqc" firstAttribute="leading" secondItem="emx-MJ-5P5" secondAttribute="leading" id="c66-pU-arf"/>
                             <constraint firstAttribute="trailing" secondItem="kn9-Wv-qqc" secondAttribute="trailing" id="f5e-wa-j5R"/>
                             <constraint firstItem="kn9-Wv-qqc" firstAttribute="top" secondItem="emx-MJ-5P5" secondAttribute="top" id="yt2-0N-12h"/>
@@ -2405,7 +2411,6 @@
         <image name="WhiteTab.png" width="236" height="169"/>
         <image name="imgButtonChPass.png" width="393" height="30"/>
         <image name="imgChangePassLabel.png" width="540" height="62"/>
-        <image name="imgDeleteRenewal.png" width="381" height="30"/>
         <image name="imgHomeIcon.png" width="26" height="25"/>
         <image name="imgLoginField.png" width="250" height="98"/>
         <image name="imgLogout.png" width="25" height="19"/>

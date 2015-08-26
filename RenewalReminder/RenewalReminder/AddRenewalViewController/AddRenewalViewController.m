@@ -123,6 +123,9 @@
 }
 
 - (void)showDatePicker{
+    
+//    NSDate *tmpDate = 
+    
     [self.scrollViewAddRenewal setContentSize:CGSizeMake(320, 568)];
     self.typePicker.hidden = YES;
     self.viewPicker.hidden = NO;
@@ -200,12 +203,30 @@
 - (IBAction)clickedRenewalDate:(id)sender {
     isSelectRenewalDate = YES;
     isSelectStartDate = NO;
+    NSDateFormatter *f = [[NSDateFormatter alloc] init];
+    [f setDateStyle:NSDateFormatterFullStyle];
+    [f setTimeZone:[NSTimeZone systemTimeZone]];
+    [f setDateFormat:@"EEEE, d MMMM, yyyy"];
+    NSDate *tmp = [f dateFromString:self.txtRenewaldate.text];
+    if (tmp != nil) {
+        [self.datePicker setDate:tmp animated:NO];
+    }
+    
     [self showDatePicker];
 }
 
 - (IBAction)clickedStartDate:(id)sender {
     isSelectStartDate = YES;
     isSelectRenewalDate = NO;
+    
+    NSDateFormatter *f = [[NSDateFormatter alloc] init];
+    [f setDateStyle:NSDateFormatterFullStyle];
+    [f setTimeZone:[NSTimeZone systemTimeZone]];
+    [f setDateFormat:@"EEEE, d MMMM, yyyy"];
+    NSDate *tmp = [f dateFromString:self.txtStartDate.text];
+    if (tmp != nil) {
+        [self.datePicker setDate:tmp animated:NO];
+    }
     [self showDatePicker];
 }
 
